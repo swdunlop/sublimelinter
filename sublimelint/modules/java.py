@@ -57,7 +57,9 @@ def run(code, view, filename='untitled'):
             line, error = match.groups()
         else:
             continue
-
+        # the following is a dirty trick, java wants full classpaths when it lints.
+        if error == 'cannot find symbol':
+            continue 
         lineno = int(line) - 1
         lines.add(lineno)
         addMessage(lineno, error)
