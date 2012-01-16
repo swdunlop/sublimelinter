@@ -1,3 +1,6 @@
-.DS_Store
+.git
+.hg
+.svn
+
 *.pyc
-*.sublime-project
+*.pyo
